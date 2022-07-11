@@ -1,12 +1,21 @@
 {
-    "name": "movie_api",
-    "version": "1.0.0",
-    "description": "A back-end API to get movies.",
-    "main": "server.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js"
-    },
-    "author": "",
-    "license": "ISC"
+  "name": "movie_api",
+  "version": "1.0.0",
+  "description": "A back-end API to get movies.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Digital-Solver/movie-api.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Digital-Solver/movie-api/issues"
+  },
+  "homepage": "https://github.com/Digital-Solver/movie-api#readme"
 }
