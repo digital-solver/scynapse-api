@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A back-end API to get movies.",
   "main": "server.js",
+  "type" : "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -17,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/Digital-Solver/movie-api/issues"
   },
-  "homepage": "https://github.com/Digital-Solver/movie-api#readme"
+  "homepage": "https://github.com/Digital-Solver/movie-api#readme",
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
 }
