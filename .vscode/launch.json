@@ -9,9 +9,9 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}\\server.js",
+            "program": "${workspaceFolder}\\index.js",
             "outFiles": ["${workspaceFolder}/**/*.js"],
-            "runtimeExecutable": "C:/Users/kerrc/AppData/Roaming/nvm/v16.15.1/node.exe"
+            "runtimeExecutable": "C:/Users/kerrc/AppData/Roaming/nvm/v16.16.0/node.exe"
         }
     ]
 }

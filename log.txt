@@ -1,36 +1,20 @@
-URL: /
-Timestamp: Tue Jul 05 2022 14:17:01 GMT+0200 (Central European Summer Time)
-
-URL: /documentation
-Timestamp: Tue Jul 05 2022 14:25:26 GMT+0200 (Central European Summer Time)
-
-URL: /index.html
-Timestamp: Tue Jul 05 2022 17:41:28 GMT+0200 (Central European Summer Time)
-
-URL: /favicon.ico
-Timestamp: Tue Jul 05 2022 17:41:29 GMT+0200 (Central European Summer Time)
-
-URL: /
-Timestamp: Tue Jul 05 2022 17:41:42 GMT+0200 (Central European Summer Time)
-
-URL: /favicon.ico
-Timestamp: Tue Jul 05 2022 17:41:42 GMT+0200 (Central European Summer Time)
-
-URL: /documentation
-Timestamp: Tue Jul 05 2022 17:42:25 GMT+0200 (Central European Summer Time)
-
-URL: /
-Timestamp: Tue Jul 05 2022 17:43:10 GMT+0200 (Central European Summer Time)
-
-URL: /
-Timestamp: Tue Jul 05 2022 17:43:39 GMT+0200 (Central European Summer Time)
-
-URL: /favicon.ico
-Timestamp: Tue Jul 05 2022 17:43:39 GMT+0200 (Central European Summer Time)
-
-URL: /documentation
-Timestamp: Tue Jul 05 2022 17:43:43 GMT+0200 (Central European Summer Time)
-
-URL: /favicon.ico
-Timestamp: Tue Jul 05 2022 17:43:45 GMT+0200 (Central European Summer Time)
-
+::1 - - [13/Jul/2022:12:07:47 +0000] "GET /secreturl HTTP/1.1" 200 99 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:07:49 +0000] "GET /secreturl HTTP/1.1" 200 99 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:07:56 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:07:58 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:08:06 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:08:12 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:43:47 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:44:21 +0000] "GET / HTTP/1.1" 200 375 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:44:23 +0000] "GET /documentation HTTP/1.1" 404 255 "http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:44:34 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:45:38 +0000] "GET /movies HTTP/1.1" 200 565 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:45:52 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:51:14 +0000] "GET /documentation HTTP/1.1" 404 255 "http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:51:34 +0000] "GET /documentation HTTP/1.1" 200 471 "http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:51:42 +0000] "GET /documentation HTTP/1.1" 404 255 "http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:55:16 +0000] "GET /documentation HTTP/1.1" 404 255 "http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:55:35 +0000] "GET /documentation HTTP/1.1" 404 255 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:55:41 +0000] "GET /documentation.html HTTP/1.1" 200 471 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:55:57 +0000] "GET / HTTP/1.1" 200 380 "http://localhost:8080/documentation.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [13/Jul/2022:12:55:58 +0000] "GET /documentation.html HTTP/1.1" 304 - "http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
