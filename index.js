@@ -73,7 +73,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use(methodOverride());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Something broke!');
@@ -84,10 +84,6 @@ app.use((err, req, res, next) => {
 
 app.get('/', (req, res) => {
   res.sendFile('/index.html', { root: __dirname });
-});
-
-app.get('/documentation', (req, res) => {
-  res.sendFile('/documentation.html', { root: __dirname });
 });
 
 app.get('/movies', (req, res) => {
