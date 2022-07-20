@@ -1,20 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <body>
+    <main>
+      <h1>My API - Movie List</h1>
+      <h2>About Movie List API</h2>
+      <p>
+        This API will allow a front end to get movies to display to the user.
+      </p>
+      <p>Go back to the <a href="/">homepage</a></p>
+      <h2>Endpoints</h2>
+      <!-- Write a list of URL endpoints and request methods that 
+        correlate with each o the operations in the bulleted list above -->
+      <table>
 
-<body>
-  <main>
-    <h1>My API - Movie List</h1>
-    <h2>About Movie List API</h2>
-    <p>This API will allow a front end to get movies to display to the user.</p>
-    <p>Go back to the <a href="/">homepage</a></p>
-  </main>
-</body>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">URL</th>
+          <th scope="col">Method</th>
+          <th scope="col">Request Body Format</th>
+          <th scope="col">Response Body Format</th>
+        </tr>
 
+        <tr>
+          <td>Get All Movies</td>
+          <td>Returns a list of all movies to the user.</td>
+          <td><code>/movies</code></td>
+          <td><code>GET</code></td>
+          <td>None</td>
+          <td>A JSON object holding data about all the moviies.</td>
+        </tr>
+
+        <tr>
+          <td>Get Single Movie</td>
+          <td>
+            Returns data (description, genre, director, image URL, whether it's
+            featured or not) about a single movie by title to the user.
+          </td>
+          <td><code>/movies/:title</code></td>
+          <td><code>GET</code></td>
+          <td>None</td>
+          <td>
+            a JSON object holding data abot a single movie, contining a title,
+            description, genre, actors, composer, ost, and director. Formatted as follows:<br /><br />
+            <code>
+              {<br />
+              title: 'Blade Runner',<br />
+              description: 'A movie about androids in a futuristic world.',<br />
+              genre: 'Science Fiction',<br />
+              actors: {<br />
+              &nbsp; 1: 'Harrison Ford',<br />
+              &nbsp; 2: 'Rutger Hauer',<br />
+              },<br />
+              composer: 'Vangelis',<br />
+              ost: {<br />
+              &nbsp; 1: 'Main Titles',<br />
+              &nbsp; 2: 'Blush Response',<br />
+              &nbsp; 3: 'Wait for Me'<br />
+              },<br />
+              director: 'Ridley Scott',<br />
+              }</code
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td>Get Genre</td>
+          <td>
+            Return data about a genre (description) by name/title (e.g.,
+            “Thriller”).
+          </td>
+          <td><code>movies/:genre</code></td>
+          <td><code>GET</code></td>
+          <td>None</td>
+          <td>A text message containing a description about a genre.</td>
+        </tr>
+
+        <tr>
+          <td>Get Director</td>
+          <td>
+            Return data about a director (bio, birth year, death year) by name.
+          </td>
+          <td><code>/movies/:director</code></td>
+          <td><code>GET</code></td>
+          <td>None</td>
+          <td>A JSON object containing data about a director. Formatted as follows:<br /><br /><code
+            >{<br />
+            name: 'John Smith',<br />
+            bio: 'A famous director, known for good movies.',<br />
+            dateOfBirth: '11-04-1956',<br />
+            dateOfDeath: '-',<br />
+            }</code</td>
+        </tr>
+
+        <tr>
+          <td>Register User</td>
+          <td>Allow new users to register.</td>
+          <td><code>/users</code></td>
+          <td><code>POST</code></td>
+          <td>
+            A JSON Object Holding data about the user to add. Structured as
+            follows:<br /><br /><code
+              >{<br />
+              name: 'John Smith',<br />
+              username: 'jsmith99',<br />
+              password: '1234',<br />
+              }</code
+            >
+          </td>
+          <td>
+            A JSON Object Holding data about the user added. Structured as
+            follows:<br /><br /><code
+              >{<br />
+              name: 'John Smith',<br />
+              username: 'jsmith99',<br />
+              password: '1234',<br />
+              id: 'e13d345-1d467e89-1d246e8-12d89e9',<br />
+              }</code
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td>Update User</td>
+          <td>Allow users to update their user info (username).</td>
+          <td><code>/users/:username</code></td>
+          <td><code>PUT</code></td>
+          <td>None</td>
+          <td>
+            A text message indicating whether the info was successfully updated.
+          </td>
+        </tr>
+
+        <tr>
+          <td>Deregister User</td>
+          <td>
+            Allow existing users to deregister (showing only a text that a user
+            email has been removed—more on this later).
+          </td>
+          <td><code>/users/:username</code></td>
+          <td><code>DELETE</code></td>
+          <td>None</td>
+          <td>
+            A text message indicating whether the user was successfully
+            deregistered.
+          </td>
+        </tr>
+
+        <tr>
+          <td>Add Movie to Favourites</td>
+          <td>
+            Allow users to add a movie to their list of favorites (showing only
+            a text that a movie has been added—more on this later).
+          </td>
+          <td><code>/users/:username/favourites/:title</code></td>
+          <td><code>POST</code></td>
+          <td>None</td>
+          <td>
+            A text message indicating whether the movie was successfully added
+            to favourites.
+          </td>
+        </tr>
+
+        <tr>
+          <td>Remove Movie from Favourites</td>
+          <td>
+            Allow users to remove a movie from their list of favorites (showing
+            only a text that a movie has been removed—more on this later).
+          </td>
+          <td><code>/users/:username/favourites/:title</code></td>
+          <td><code>DELETE</code></td>
+          <td>None</td>
+          <td>
+            A text message indicating whether the movie was successfully removed
+            from favourites.
+          </td>
+        </tr>
+
+      </table>
+    </main>
+  </body>
+  <style> 
+  
+  td, th{
+    background-color: rgb(255, 252, 241); 
+    border-left: 1px solid rgba(0, 0, 0, 0.25); 
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+  } 
+
+  th {
+    text-align: left; 
+    padding-right: 20px;
+    padding-left: 10px;
+    background-color: antiquewhite;
+  } 
+
+  td {
+    padding-block: 20px;
+    padding-inline: 10px;
+  } 
+
+  code {
+    color: red;
+  }
+
+    </style>
 </html>
