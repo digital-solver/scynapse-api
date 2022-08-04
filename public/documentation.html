@@ -35,20 +35,20 @@
           <td><code>/movies</code></td>
           <td><code>GET</code></td>
           <td>None</td>
-          <td>A JSON object holding data about all the moviies.</td>
+          <td>A JSON object holding data about all the movies.</td>
         </tr>
 
         <tr>
-          <td>Get Single Movie</td>
+          <td>Get Single Movie by Title</td>
           <td>
             Returns data (description, genre, director, image URL, whether it's
             featured or not) about a single movie by title to the user.
           </td>
-          <td><code>/movies/:title</code></td>
+          <td><code>/movies/:Title</code></td>
           <td><code>GET</code></td>
           <td>None</td>
           <td>
-            a JSON object holding data abot a single movie, contining a title,
+            a JSON object holding data about a single movie, contining a title,
             description, genre, actors, composer, ost, and director. Formatted as follows:<br /><br />
             <code>
               {<br />
@@ -77,10 +77,10 @@
             Return data about a genre (description) by name/title (e.g.,
             “Thriller”).
           </td>
-          <td><code>movies/:genre</code></td>
+          <td><code>genres/:Genre</code></td>
           <td><code>GET</code></td>
           <td>None</td>
-          <td>A text message containing a description about a genre.</td>
+          <td>A JSON object containing the name of and description about a genre.</td>
         </tr>
 
         <tr>
@@ -88,20 +88,20 @@
           <td>
             Return data about a director (bio, birth year, death year) by name.
           </td>
-          <td><code>/movies/:director</code></td>
+          <td><code>/directors/:Director</code></td>
           <td><code>GET</code></td>
           <td>None</td>
           <td>A JSON object containing data about a director. Formatted as follows:<br /><br /><code
             >{<br />
-            name: 'John Smith',<br />
-            bio: 'A famous director, known for good movies.',<br />
-            dateOfBirth: '11-04-1956',<br />
-            dateOfDeath: '-',<br />
+            Name: 'John Smith',<br />
+            Bio: 'A famous director, known for good movies.',<br />
+            Birth: '11-04-1956',<br />
+            Death: '-',<br />
             }</code</td>
         </tr>
 
         <tr>
-          <td>Register User</td>
+          <td>Create User</td>
           <td>Allow new users to register.</td>
           <td><code>/users</code></td>
           <td><code>POST</code></td>
@@ -109,9 +109,9 @@
             A JSON Object Holding data about the user to add. Structured as
             follows:<br /><br /><code
               >{<br />
-              name: 'John Smith',<br />
-              username: 'jsmith99',<br />
-              password: '1234',<br />
+              Username: 'jsmith99',<br />
+              Password: '1234',<br />
+              Email: 'example@example.com',<br />
               }</code
             >
           </td>
@@ -119,10 +119,12 @@
             A JSON Object Holding data about the user added. Structured as
             follows:<br /><br /><code
               >{<br />
-              name: 'John Smith',<br />
-              username: 'jsmith99',<br />
-              password: '1234',<br />
-              id: 'e13d345-1d467e89-1d246e8-12d89e9',<br />
+              Username: 'jsmith99',<br />
+              Password: '1234',<br />
+              Email: 'js@example.io',<br />
+              FavoriteMovies: [],<br />
+              _id: '62ec1f3b8725f1f24d724804',<br />
+              __v: '0',<br />
               }</code
             >
           </td>
@@ -131,21 +133,27 @@
         <tr>
           <td>Update User</td>
           <td>Allow users to update their user info (username).</td>
-          <td><code>/users/:username</code></td>
+          <td><code>/users/:Username</code></td>
           <td><code>PUT</code></td>
-          <td>None</td>
+          <td>A JSON object containing the updates to be made. Formatted as follows:<br /><br />
+            <code>{<br />
+            Username: 'jsmith99',<br />
+            Password: 'UPDATED_PASWORD',<br />
+            Email: 'js@example.io'<br />
+            }</code>
+          </td>
           <td>
-            A text message indicating whether the info was successfully updated.
+            A JSON object of the user containing the new data.
           </td>
         </tr>
 
         <tr>
-          <td>Deregister User</td>
+          <td>Remove User</td>
           <td>
             Allow existing users to deregister (showing only a text that a user
-            email has been removed—more on this later).
+            email has been removed).
           </td>
-          <td><code>/users/:username</code></td>
+          <td><code>/users/:Username</code></td>
           <td><code>DELETE</code></td>
           <td>None</td>
           <td>
@@ -160,12 +168,11 @@
             Allow users to add a movie to their list of favorites (showing only
             a text that a movie has been added—more on this later).
           </td>
-          <td><code>/users/:username/favourites/:title</code></td>
+          <td><code>/users/:Username/favorites/:MovieID</code></td>
           <td><code>POST</code></td>
           <td>None</td>
           <td>
-            A text message indicating whether the movie was successfully added
-            to favourites.
+            A JSON object showing the MovieID data in the users favorite movies array.
           </td>
         </tr>
 
@@ -175,12 +182,11 @@
             Allow users to remove a movie from their list of favorites (showing
             only a text that a movie has been removed—more on this later).
           </td>
-          <td><code>/users/:username/favourites/:title</code></td>
+          <td><code>/users/:Username/favorites/:MovieID</code></td>
           <td><code>DELETE</code></td>
           <td>None</td>
           <td>
-            A text message indicating whether the movie was successfully removed
-            from favourites.
+            A JSON object showing that the MovieID is not in the users favorite movies array.
           </td>
         </tr>
 
