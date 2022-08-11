@@ -1,5 +1,6 @@
 // IMPORTS
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
 // SCHEMAS
 const movieSchema = mongoose.Schema({
@@ -25,6 +26,12 @@ const userSchema = mongoose.Schema({
   Birthday: Date,
   FavoriteMovies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Movie' }],
 });
+
+userSchema.statistics.hashPassword = (password) => bcrypt.hashSync(password, 10);
+
+userSchema.methods.validatePassword = function validatePassword(password) {
+  return bcrypt.compareSync(password, this.Password);
+};
 
 // MODELS
 const Movie = mongoose.model('Movie', movieSchema);
