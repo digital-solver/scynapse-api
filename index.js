@@ -28,12 +28,13 @@ const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), {
 // Configure Cross-Origin Resource Sharing (CORS)
 const allowedOrigins = ['http://localhost:8080', 'http://testsite.com'];
 
-// MIDDLEWARE
+// Configure Date-Time Middleware
 const requestTime = (req, res, next) => {
   req.requestTime = Date.now();
   next();
 };
 
+// Use Middleware
 app.use(morgan('combined', { stream: accessLogStream }));
 app.use(requestTime);
 app.use(bodyParser.urlencoded({
