@@ -28,7 +28,7 @@ const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), {
   flags: 'a',
 });
 
-// Configure Cross-Origin Resource Sharing (CORS)
+// Configure Allowed Domains for Cross-Origin Resource Sharing (CORS)
 const allowedOrigins = ['http://localhost:8080', 'http://testsite.com'];
 
 // Configure Date-Time Middleware
@@ -51,16 +51,18 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!');
   next();
 });
-app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const message = `The CORS policy for this application doesnt allow access from this origin: ${origin}`;
-      return callback(new Error(message), false);
-    }
-    return callback(null, true);
-  },
-}));
+
+app.use(cors()); // CORS Option 1: Allow all domains
+// app.use(cors({ // CORS Option 2: Only allow specific domains (see the variable: allowedOrigins)
+//   origin: (origin, callback) => {
+//     if (!origin) return callback(null, true);
+//     if (allowedOrigins.indexOf(origin) === -1) {
+//       const message = `The CORS policy for this application doesnt allow access from this origin: ${origin}`;
+//       return callback(new Error(message), false);
+//     }
+//     return callback(null, true);
+//   },
+// }));
 
 // AUTHENTICATION
 const auth = require('./auth')(app);
