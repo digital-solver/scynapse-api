@@ -62,8 +62,9 @@ app.use(cors({
 // AUTHENTICATION
 const auth = require('./auth')(app);
 require('./passport');
-// ROUTING
 
+// ROUTING
+// Home
 app.get('/', (req, res) => {
   res.sendFile('/index.html', { root: __dirname });
 });
