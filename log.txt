@@ -287,3 +287,5 @@
 ::1 - - [09/Aug/2022:07:30:21 +0000] "POST /users/user1/favorites/62e938287c0a0ae6aed15c15 HTTP/1.1" 401 - "-" "PostmanRuntime/7.29.2"
 ::1 - - [09/Aug/2022:07:30:27 +0000] "POST /users/user1/favorites/62e938287c0a0ae6aed15c15 HTTP/1.1" 200 157 "-" "PostmanRuntime/7.29.2"
 ::1 - - [09/Aug/2022:07:31:17 +0000] "DELETE /users/user1/favorites/62e938287c0a0ae6aed15c15 HTTP/1.1" 200 131 "-" "PostmanRuntime/7.29.2"
+127.0.0.1 - - [16/Aug/2022:12:12:25 +0000] "GET / HTTP/1.1" 200 380 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
+127.0.0.1 - - [16/Aug/2022:12:12:25 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:8090/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
