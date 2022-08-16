@@ -276,6 +276,6 @@ app.delete('/users/:Username/favorites/:MovieID', passport.authenticate('jwt', {
 
 // SERVER
 const port = process.env.PORT || 8080;
-app.listen(port, '0.0.0.0', () => {
+app.listen(port, () => {
   console.log(`Listening on port: ${port}`);
 });
