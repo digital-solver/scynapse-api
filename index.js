@@ -154,8 +154,6 @@ app.post(
     check('Email', 'Email does not appear to be valid').isEmail(),
   ],
 
-  passport.authenticate('jwt', { session: false }),
-
   (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
