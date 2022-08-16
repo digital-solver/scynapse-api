@@ -9,7 +9,7 @@ const generateJWTToken = (user) => jwt.sign(user, jwtSecret, {
   algorithm: 'HS256',
 });
 
-// User login
+// User login: POST request
 module.exports = (router) => {
   router.post('/login', (req, res) => {
     passport.authenticate('local', { session: false }, (error, user, info) => {
