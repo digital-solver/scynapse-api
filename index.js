@@ -18,8 +18,10 @@ const app = express();
 // Configure Mongoose Module
 const Movies = Models.Movie;
 const Users = Models.User;
-// mongoose.connect('mongodb://localhost:27017/movie-api', { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.connect('process.env.CONNECTION_URI', { useNewUrlParser: true, useUnifiedTopology: true });
+// const URI = 'mongodb://localhost:27017/movie-api'; // Local DB
+const URI = process.env.CONNECTION_URI; // Hosted DB
+
+mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Configure logging file access
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), {
