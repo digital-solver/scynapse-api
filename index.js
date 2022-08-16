@@ -274,5 +274,8 @@ app.delete('/users/:Username/favorites/:MovieID', passport.authenticate('jwt', {
   );
 });
 
-// SERVER & HEROKU
-app.listen(process.env.PORT || 8080);
+// SERVER & HEROKU ENVIRONMENT VARABLES
+const PORT = process.env.PORT || 8090;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Listening on port: ${PORT}`);
+});
