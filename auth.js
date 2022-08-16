@@ -1,6 +1,7 @@
 const jwtSecret = 'your_jwt_secret';
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
+const { check, validationResult } = require('express-validator');
 require('./passport');
 
 const generateJWTToken = (user) => jwt.sign(user, jwtSecret, {
@@ -11,21 +12,34 @@ const generateJWTToken = (user) => jwt.sign(user, jwtSecret, {
 
 // User login: POST request
 module.exports = (router) => {
-  router.post('/login', (req, res) => {
-    passport.authenticate('local', { session: false }, (error, user, info) => {
-      if (error || !user) {
-        return res.status(400).json({
-          message: 'Something is not right',
-          user,
-        });
+  router.post(
+    '/login',
+    [
+      check('Username', 'Username is required').isLength({ min: 5 }),
+      check('Username', 'Username contains non alphanumeric characters - not allowed').isAlphanumeric(),
+      check('Password', 'Password is required').not().isEmpty(),
+      check('Email', 'Email does not appear to be valid').isEmail(),
+    ],
+    (req, res) => {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(422).json({ errors: errors.array() });
       }
-      req.login(user, { session: false }, (err) => {
-        if (err) {
-          res.send(err);
+      passport.authenticate('local', { session: false }, (error, user, info) => {
+        if (error || !user) {
+          return res.status(400).json({
+            message: 'Something is not right',
+            user,
+          });
         }
-        const token = generateJWTToken(user.toJSON());
-        return res.json({ user, token });
-      });
-    })(req, res);
-  });
+        req.login(user, { session: false }, (err) => {
+          if (err) {
+            res.send(err);
+          }
+          const token = generateJWTToken(user.toJSON());
+          return res.json({ user, token });
+        });
+      })(req, res);
+    },
+  );
 };
