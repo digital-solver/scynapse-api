@@ -244,21 +244,31 @@ app.delete('/users/:Username', passport.authenticate('jwt', { session: false }),
 });
 
 // Add a movie to a user's list of favourites by movie ID
-app.post('/users/:Username/favorites/:MovieID', passport.authenticate('jwt', { session: false }), (req, res) => {
-  Users.findOneAndUpdate(
-    { Username: req.params.Username },
-    { $addToSet: { FavoriteMovies: req.params.MovieID } },
-    { new: true },
-    (err, updatedUser) => {
-      if (err) {
-        console.error(err);
-        res.status(500).send(`Error: ${err}`);
-      } else {
-        res.json(updatedUser);
-      }
-    },
-  );
-});
+app.post(
+  '/users/:Username/favorites/:MovieID',
+  [
+    check('Username', 'Username is required').isLength({ min: 5 }),
+    check('Username', 'Username contains non alphanumeric characters - not allowed').isAlphanumeric(),
+    check('MovieID', 'MovieID is required').not().isEmpty(),
+    check('MovieID', 'MovieID does not appear to be valid').isMongoId(),
+  ],
+  passport.authenticate('jwt', { session: false }),
+  (req, res) => {
+    Users.findOneAndUpdate(
+      { Username: req.params.Username },
+      { $addToSet: { FavoriteMovies: req.params.MovieID } },
+      { new: true },
+      (err, updatedUser) => {
+        if (err) {
+          console.error(err);
+          res.status(500).send(`Error: ${err}`);
+        } else {
+          res.json(updatedUser);
+        }
+      },
+    );
+  },
+);
 
 // Remove a movie from favourites
 app.delete('/users/:Username/favorites/:MovieID', passport.authenticate('jwt', { session: false }), (req, res) => {
