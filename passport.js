@@ -1,3 +1,4 @@
+// IMPORTS
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const passportJWT = require('passport-jwt');
@@ -7,6 +8,7 @@ const Users = Models.User;
 const JWTStrategy = passportJWT.Strategy;
 const ExtractJWT = passportJWT.ExtractJwt;
 
+// PASSPORT STRATEGIES
 passport.use(new LocalStrategy({
   usernameField: 'Username',
   passwordField: 'Password',
