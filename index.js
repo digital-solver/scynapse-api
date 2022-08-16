@@ -18,8 +18,8 @@ const app = express();
 // Configure Mongoose Module
 const Movies = Models.Movie;
 const Users = Models.User;
-// const URI = 'mongodb://localhost:27017/movie-api'; // Local DB
-const URI = process.env.CONNECTION_URI; // Hosted DB
+// const URI = 'mongodb://localhost:27017/movie-api'; // Database Option 1: Local DB
+const URI = process.env.CONNECTION_URI; // Database Option 2: Hosted DB
 
 mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
