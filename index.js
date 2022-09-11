@@ -74,15 +74,6 @@ app.get('/', (req, res) => {
   res.sendFile('/index.html', { root: __dirname });
 });
 
-// Client-Side Routing Catch-All
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/index.html'), (err) => {
-    if (err) {
-      res.status(500).send(err);
-    }
-  });
-});
-
 // Get a list of all movies
 app.get('/movies', passport.authenticate('jwt', { session: false }), (req, res) => {
   Movies.find()
@@ -294,6 +285,15 @@ app.delete('/users/:Username/favorites/:MovieID', passport.authenticate('jwt', {
       }
     },
   );
+});
+
+// Client-Side Routing Catch-All
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/index.html'), (err) => {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
 });
 
 // SERVER & HEROKU
