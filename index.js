@@ -50,7 +50,7 @@ app.use((err, req, res, next) => {
 });
 
 // Configure Allowed Domains for Cross-Origin Resource Sharing (CORS)
-const allowedOrigins = ['http://localhost:8080', 'http://localhost:1234', 'https://kds-movie-app-client.netlify.app', 'https://kds-scynapse.netlify.app'];
+// const allowedOrigins = ['http://localhost:8080', 'http://localhost:1234', 'https://kds-movie-app-client.netlify.app', 'https://kds-scynapse.netlify.app'];
 
 app.use(cors()); // CORS Option 1: Allow all domains
 // app.use(cors({ // CORS Option 2: Only allow specific domains (see the variable: allowedOrigins)
