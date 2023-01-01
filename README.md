@@ -5,11 +5,11 @@ A server and API back end for a web application for movie enthusiasts to access 
 ## Table of Contents
 
 * [Features](https://github.com/Digital-Solver/movie-api/edit/main/README.md#Features)
-* [Materials](https://github.com/Digital-Solver/movie-api/edit/main/README.md#Materials)
 * [Technologies](https://github.com/Digital-Solver/movie-api/edit/main/README.md#Technologies)
 * [Installation](https://github.com/Digital-Solver/movie-api/edit/main/README.md#Installation)
 * [Usage](https://github.com/Digital-Solver/movie-api/edit/main/README.md#Usage)
 * [Configuration](https://github.com/Digital-Solver/movie-api/edit/main/README.md#Configuration)
+* [Materials](https://github.com/Digital-Solver/movie-api/edit/main/README.md#Materials)
 * [Contribution Guideilnes](https://github.com/Digital-Solver/movie-api/edit/main/README.md#Contribution)
 * [License](https://github.com/Digital-Solver/movie-api/edit/main/README.md#License)
 * [Contact](https://github.com/Digital-Solver/movie-api/edit/main/README.md#Contact)
@@ -35,13 +35,6 @@ Scynapse implements the following user stories:
 
 1. As a user, I want to be able to receive information on movies, directors, and genres so that I can learn more about movies I’ve watched or am interested in.
 2. As a user, I want to be able to create a profile so I can save data about my favorite movies.
-
-## Materials
-During the development of this project, the following materials were used to guide the work and stay organized:
-
-User stories: A set of user stories were created to help understand the needs and goals of the users of the application. These stories served as a roadmap for the development process, helping to prioritize features and functionality.
-
-Kanban board: A Kanban board was used to track progress and manage tasks. The board helped keep track and ensure deadlines were met.
 
 ## Technologies
 
@@ -89,6 +82,18 @@ Scynapse is a Node.js and Express with Mongoose application that uses REST archi
 The Scynapse API can be accessed via a web browser or an API tool like Postman at the URL where the server is running (default: http://localhost:8090), on this page the user will find a link to the Endpoint documentation in HTML form. 
 
 Through the API, users can do things like sign up, update their personal information, create a list of their favorite movies, and retrieve data about any movie in the database.
+
+## Configuration
+
+The Scynapse API server port can be configured in the `.env` file by adding the following line: `PORT: {port}`
+
+
+## Materials
+During the development of this project, the following materials were used to guide the work and stay organized:
+
+User stories: A set of user stories were created to help understand the needs and goals of the users of the application. These stories served as a roadmap for the development process, helping to prioritize features and functionality.
+
+Kanban board: A Kanban board was used to track progress and manage tasks. The board helped keep track and ensure deadlines were met.
 
 ## Contribution Guidelines
 
