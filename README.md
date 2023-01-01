@@ -73,13 +73,14 @@ Scynapse is a Node.js and Express with Mongoose application that uses REST archi
 
 ## Installation
 
-// TODO: Verify this section
-
-1. Install Node.js and MongoDB on your local machine.
-2. Clone this repository.
-3. In the project root directory, run npm install to install required dependencies.
-4. Set up a local MongoDB instance and update the URI value in the .env file with the connection string for your local database.
-5. Run `npm start` to start the server.
+1. Download and install the latest version of Node.js from the official website (https://nodejs.org/). Follow the prompts to complete the installation process.
+2. Download and install MongoDB from the official website (https://www.mongodb.com/). Follow the instructions to set up a local MongoDB instance on your machine.
+3. Open a terminal or command prompt and navigate to the directory where you want to clone the repository.
+4. Use the following command to clone the repository: `git clone https://github.com/Digital-Solver/movie-api.git`
+5. Navigate to the project root directory: cd movie-api
+6. Run `npm install` to install the required dependencies.
+7. Open the `.env` file in a text editor and update the `URI` value with the connection string for your local MongoDB instance.
+8. Run `npm run start` to start the server. The server should now be running on your local machine on port 8090.
 
 ## Usage
 
