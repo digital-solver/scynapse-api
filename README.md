@@ -111,9 +111,3 @@ Scynapse is released under the MIT License.
 ## Contact
 
 If you have any questions or feedback about Scynapse, please contact me at kerr(dot)digitalsolver@gmail.com
-
-## Resources
-
-[Node.js](https://nodejs.org/)
-[MongoDB](https://www.mongodb.com/)
-[Express](https://expressjs.com/)
