@@ -1,7 +1,5 @@
 {
-  "tags": {
-    "allowUnknownTags": true
-  },
+  "recurseDepth": 10,
   "source": {
     "include": [
       "index.js",
@@ -9,14 +7,18 @@
       "models.js",
       "passport.js"
     ],
-    "exclude": ["node_modules"],
-    "includePattern": ".+\\.js(doc)?$",
-    "excludePattern": "(^|\\/|\\\\)_"
+      "includePattern": ".+\\.js(doc|x)?$",
+      "excludePattern": "(^|\\/|\\\\)_"
   },
   "plugins": ["plugins/markdown"],
+  "sourceType": "module",
+  "tags": {
+      "allowUnknownTags": true,
+      "dictionaries": ["jsdoc","closure"]
+  },
   "templates": {
-    "cleverLinks": false,
-    "monospaceLinks": false
+      "cleverLinks": false,
+      "monospaceLinks": false
   },
   "opts": {
     "destination": "./docs/",
