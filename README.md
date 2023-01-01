@@ -5,6 +5,7 @@ A server and API back end for a web application for movie enthusiasts to access 
 ## Table of Contents
 
 * [Features](https://github.com/Digital-Solver/movie-api/edit/main/README.md#Features)
+* [Materials](https://github.com/Digital-Solver/movie-api/edit/main/README.md#Materials)
 * [Technologies](https://github.com/Digital-Solver/movie-api/edit/main/README.md#Technologies)
 * [Installation](https://github.com/Digital-Solver/movie-api/edit/main/README.md#Installation)
 * [Usage](https://github.com/Digital-Solver/movie-api/edit/main/README.md#Usage)
@@ -27,6 +28,13 @@ Scynapse provides the following features:
 * Allow users to add a movie to their list of favorites
 * Allow users to remove a movie from their list of favorites
 * Allow existing users to deregister
+
+## Materials
+During the development of this project, the following materials were used to guide the work and stay organized:
+
+User stories: A set of user stories were created to help understand the needs and goals of the users of the application. These stories served as a roadmap for the development process, helping to prioritize features and functionality.
+
+Kanban board: A Kanban board was used to track progress and manage tasks. The board helped keep track and ensure deadlines were met.
 
 ## Technologies
 
