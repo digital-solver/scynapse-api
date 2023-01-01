@@ -79,8 +79,10 @@ Scynapse is a Node.js and Express with Mongoose application that uses REST archi
 4. Use the following command to clone the repository: `git clone https://github.com/Digital-Solver/movie-api.git`
 5. Navigate to the project root directory: cd movie-api
 6. Run `npm install` to install the required dependencies.
-7. Open the `.env` file in a text editor and update the `URI` value with the connection string for your local MongoDB instance.
-8. Run `npm run start` to start the server. The server should now be running on your local machine on port 8090.
+7. Start the MongoDB server by running the `mongod` command in the terminal.
+8. Create a file named `.env` in the root directory of the project with the following line: `CONNECTION_URI=mongodb://localhost:27017/{your_database_name}`
+9. Optional: Add a `PORT` variable to the `.env` file. The default port is 8090.
+8. Run `npm run start` to start the server. The server should now be running on your local machine on the specified or default port.
 
 ## Usage
 
