@@ -19,7 +19,7 @@ A server and API back end for a web application for movie enthusiasts to access 
 Scynapse provides the following features:
 
 * Return a list of all movies to the user
-* Return data (description, genre, director, image URL, whether it’s featured or not) about a single movie by title to the user
+* Return data about a single movie by title to the user
 * Return data about a genre (description) by name/title (e.g., “Thriller”)
 * Return data about a director (bio, birth year, death year) by name
 * Allow new users to register
@@ -58,7 +58,7 @@ Scynapse is a Node.js and Express with Mongoose application that uses REST archi
 
 ## Installation
 
-// TODO: Improve this section
+// TODO: Verify this section
 
 1. Install Node.js and MongoDB on your local machine.
 2. Clone this repository.
@@ -68,11 +68,9 @@ Scynapse is a Node.js and Express with Mongoose application that uses REST archi
 
 ## Usage
 
-The Scynapse API can be accessed via a web browser or an API tool like Postman at the URL where the server is running (default: http://localhost:8090). Through the API, users can do things like sign up, update their personal information, and create a list of their favorite movies.
+The Scynapse API can be accessed via a web browser or an API tool like Postman at the URL where the server is running (default: http://localhost:8090), on this page the user will find a link to the Endpoint documentation in HTML form. 
 
-## Configuration
-
-// TODO: Write this section
+Through the API, users can do things like sign up, update their personal information, create a list of their favorite movies, and retrieve data about any movie in the database.
 
 ## Contribution Guidelines
 
