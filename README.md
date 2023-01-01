@@ -29,6 +29,13 @@ Scynapse provides the following features:
 * Allow users to remove a movie from their list of favorites
 * Allow existing users to deregister
 
+### User Stories
+
+Scynapse implements the following user stories:
+
+1. As a user, I want to be able to receive information on movies, directors, and genres so that I can learn more about movies I’ve watched or am interested in.
+2. As a user, I want to be able to create a profile so I can save data about my favorite movies.
+
 ## Materials
 During the development of this project, the following materials were used to guide the work and stay organized:
 
