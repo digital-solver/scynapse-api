@@ -42,12 +42,12 @@ passport.use(new LocalStrategy({
 /**
  * A JWT passport strategy for authenticating users.
  * @param {string} jwtFromRequest - The JWT from the request.
- * @param {string} secretKey - The secret key for validating the JWT.
+ * @param {string} secretOrKey - The secret key for validating the JWT.
  * @param {function} callback - The callback function to be called upon completion of the strategy.
  */
 passport.use(new JWTStrategy({
   jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
-  secretKey: 'your_jwt_secret',
+  secretOrKey: 'your_jwt_secret',
 }, (jwtPayload, callback) => Users.findById(jwtPayload._id)
   .then((user) => callback(null, user))
   .catch((error) => callback(error))));
