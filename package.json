@@ -8,7 +8,8 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build-docs": "jsdoc -c ./jsdoc.conf.json"
   },
   "author": "Kerr Campbell",
   "license": "ISC",
